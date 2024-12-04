@@ -1,6 +1,8 @@
 # Criando um Banco Digital com Java e Orientação a Objetos
 
-Desafio: Considerando nosso conhecimento no domínio bancário, iremos abstrair uma solução Orientada a Objetos em Java. Para isso, vamos interpretar o seguinte cenário: “Um banco oferece aos seus clientes dois tipos de contas (corrente e poupança), as quais possuem as funcionalidades de depósito, saque e transferência (entre contas da própria instituição).”
+## Desafio: 
+
+Considerando nosso conhecimento no domínio bancário, iremos abstrair uma solução Orientada a Objetos em Java. Para isso, vamos interpretar o seguinte cenário: “Um banco oferece aos seus clientes dois tipos de contas (corrente e poupança), as quais possuem as funcionalidades de depósito, saque e transferência (entre contas da própria instituição).”
 
 ## Descrição Detalhada do Projeto:
 
@@ -11,10 +13,17 @@ O projeto teve como principal objetivo simular um banco digital básico, impleme
 **Desafios e Soluções:**
 
 * **Uso de Classes e Interface:**
-    * **Classes:** Foram criadas classes para representar as entidades do sistema, como `Banco`, `Cliente`, `Conta`, `ContaCorrente` e `ContaPoupança`. Cada classe encapsulou os dados e comportamentos específicos de cada entidade.
-    * **Interface:** A interface `IConta` foi definida para estabelecer um contrato entre as diferentes tipos de contas, definindo os métodos comuns que todas as contas deveriam implementar (como depósito, saque e transferência).
+    * **Classes:** Foram desenvolvidas classes para representar as entidades do sistema, como [`Banco`](src/Banco.java), [`Cliente`](src/Cliente.java), [`Conta`](src/Conta.java), [`ContaCorrente`](src/ContaCorrente.java) e [`ContaPoupanca`](src/ContaPoupanca.java). Cada classe encapsula os dados e comportamentos específicos de cada entidade.
+        * **Banco:** Responsável por gerenciar as contas e clientes.
+        * **Cliente:** Representa os clientes do banco, contendo informações pessoais.
+        * **Conta:** Classe base para as contas bancárias, contendo métodos comuns como depósito, saque e transferência.
+        * **ContaCorrente:** Herda de Conta e pode ter funcionalidades específicas de uma conta corrente.
+        * **ContaPoupanca:** Herda de Conta e pode ter funcionalidades específicas de uma conta poupança.
+    * **Interface:** A interface [`IConta`](src/IConta.java) foi criada para definir um contrato entre os diferentes tipos de contas, especificando os métodos comuns que todas as contas devem implementar.
+        * **IConta:** Define métodos como depósito, saque, transferência e impressão de extrato.
+
 * **Tecnologias Utilizadas:**
-    * **Java:** A linguagem de programação Java foi escolhida por ser amplamente utilizada no desenvolvimento de sistemas empresariais e por oferecer um forte suporte à programação orientada a objetos.
+    * **Java:** A linguagem de programação Java é amplamente utilizada no desenvolvimento de sistemas empresariais e por oferecer um forte suporte à programação orientada a objetos.
 
 **Resultado Alcançado:**
 
@@ -32,26 +41,12 @@ Ao final do projeto, foram obtidos os seguintes resultados:
     * **Diagrama de Classes:** A construção de um diagrama de classes visualizou as relações entre as classes, auxiliando na compreensão da arquitetura do sistema.
 * **Entendimento sobre Modificadores de Acesso:**
     * **protected:** Permite o acesso a membros da classe em classes filhas e no mesmo pacote.
-    * **private:** Restrige o acesso a membros da classe apenas dentro da própria classe.
+    * **private:** Restringe o acesso a membros da classe apenas dentro da própria classe.
     * **public:** Permite o acesso a membros da classe de qualquer lugar.
     * **static:** Define membros que pertencem à classe e não a instâncias da classe.
     * **final:** Impede que um membro seja modificado após sua inicialização.
-* **Criação de Classes:**
-    * **Banco:** Representa a instituição financeira, podendo conter informações como nome, endereço e lista de clientes.
-    * **Cliente:** Representa um cliente do banco, com atributos como nome, CPF e lista de contas.
-    * **Conta:** Classe abstrata que define os atributos e métodos comuns a todas as contas (número da conta, saldo, etc.).
-    * **ContaCorrente:** Classe concreta que herda de `Conta` e implementa funcionalidades específicas da conta corrente (cheque especial, etc.).
-    * **ContaPoupança:** Classe concreta que herda de `Conta` e implementa funcionalidades específicas da conta poupança (rendimento, etc.).
-    * **IConta:** Interface que define os métodos comuns a todas as contas (depositar, sacar, transferir).
 
-**Em resumo:**
+## Outras informações
 
-O projeto proporcionou uma experiência prática de aplicação dos conceitos da programação orientada a objetos em Java, permitindo ao desenvolvedor construir um sistema simples, mas funcional, simulando um banco digital. A compreensão dos conceitos de classes, objetos, herança, polimorfismo e modificadores de acesso foi fundamental para a conclusão do projeto.
-
-**Possíveis Extensões:**
-
-* **Implementação de outras funcionalidades:** Inclusão de funcionalidades como pagamento de contas, investimentos, empréstimos, etc.
-* **Gerenciamento de usuários:** Implementação de um sistema de login e autenticação para os clientes.
-* **Persistência de dados:** Utilização de um banco de dados para armazenar as informações das contas e clientes de forma persistente.
-* **Interface gráfica:** Desenvolvimento de uma interface gráfica para interagir com o sistema.
+Projeto desenvolvido no curso de java da DIO
 
